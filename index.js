@@ -77,7 +77,7 @@ WebpackZipFilesPlugin.prototype.apply = function (compiler) {
     };
 
     if (compiler.hooks) {
-        const plugin = {name: 'CopyPlugin'};
+        const plugin = {name: 'ZipFilesPlugin'};
         compiler.hooks.afterEmit.tapAsync(plugin, afterEmit);
     } else {
         compiler.plugin('after-emit', afterEmit);
